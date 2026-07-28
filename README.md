@@ -1,6 +1,40 @@
-# Flutter App
+# تطبيق دليل السياحة في سوريا
 
-A feature-first Flutter application with clean architecture.
+تطبيق Flutter يوفر دليلاً سياحياً شاملاً للمدن السورية مع إمكانية عرض المواقع على الخرائط ومسارات الرحلات.
+
+## لقطات الشاشة
+
+### شاشة البداية
+
+<img src="assets/screenshots/splash.jpg" width="300">
+
+### الخريطة
+
+<img src="assets/screenshots/map.jpg" width="300">
+
+### المسار على الخريطة
+
+<img src="assets/screenshots/pathonmap.jpg" width="300">
+
+### تفاصيل المكان
+
+<img src="assets/screenshots/place.jpg" width="300">
+
+### بدء الرحلة
+
+<img src="assets/screenshots/starttrip.jpg" width="300">
+
+## التقنيات المستخدمة
+
+- **Flutter**: إطار العمل الرئيسي لبناء التطبيق
+- **flutter_bloc**: إدارة الحالة بنمط Cubit
+- **go_router**: نظام التوجيه والتنقل بين الصفحات
+- **get_it**: حقن التبعيات
+- **flutter_map**: عرض الخرائط التفاعلية
+- **location**: تحديد الموقع الجغرافي
+- **http**: إجراء طلبات الشبكة
+- **shared_preferences**: حفظ البيانات المحلية
+- **latlong2**: التعامل مع الإحداثيات الجغرافية
 
 ## Architecture Overview
 

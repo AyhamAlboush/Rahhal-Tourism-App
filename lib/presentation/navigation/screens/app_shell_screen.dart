@@ -78,58 +78,39 @@ class AppShellScreen extends StatelessWidget {
               topLeft: Radius.circular(30),
               topRight: Radius.circular(30),
             ),
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
-              child: Container(
-                height: 72,
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
-                  ),
-                  // لون غامق مع شفافية عالية للبلور
-                  color: isDarkMode
-                      ? Colors.black.withValues(alpha: 0.75)
-                      : AppColors.background.withValues(alpha: 0.75),
-                  border: Border.all(
-                    color: isDarkMode
-                        ? Colors.white.withValues(alpha: 0.12)
-                        : Colors.white.withValues(alpha: 0.2),
-                    width: 1.2,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: AppColors.black.withValues(alpha: 0.4),
-                      blurRadius: 35,
-                      offset: const Offset(0, -8),
-                    ),
-                  ],
+            child: Container(
+              height: 72,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
                 ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Center(
-                        child: _buildNavItem(
-                          context,
-                          label: 'Favorites',
-                          index: 2,
-                          isDarkMode: isDarkMode,
-                        ),
+                color: AppColors.background,
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Center(
+                      child: _buildNavItem(
+                        context,
+                        label: 'Favorites',
+                        index: 2,
+                        isDarkMode: isDarkMode,
                       ),
                     ),
-                    const SizedBox(width: 75),
-                    Expanded(
-                      child: Center(
-                        child: _buildNavItem(
-                          context,
-                          label: 'Profile',
-                          index: 3,
-                          isDarkMode: isDarkMode,
-                        ),
+                  ),
+                  const SizedBox(width: 75),
+                  Expanded(
+                    child: Center(
+                      child: _buildNavItem(
+                        context,
+                        label: 'Profile',
+                        index: 3,
+                        isDarkMode: isDarkMode,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
